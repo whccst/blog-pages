@@ -7,10 +7,119 @@
     <link rel="icon" href="favicon.icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 您好，欢迎访问我的网站</title>
+     <style>
+               body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+            color: #333;
+            text-align: center;
+            padding-top: 80px;
+        }
+        h1 { color: #333; }
+         .menu-box {
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            color: #1e88e5;
+        }
+        .menu-box h1{
+            color: #1e88e5;
+        }
+
+        /* 导航栏容器 */
+        .navbar {
+            background-color: #1e88e5;     /* 品牌蓝色，可改成你的颜色 */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;             /* 最大宽度，居中对齐 */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-menu {
+            display: flex;                 /* Flexbox 横向排列 */
+            align-items: center;
+            list-style: none;
+            height: 70px;                  /* 导航栏高度 */
+        }
+        
+        .nav-menu li {
+            margin: 0 5px;
+        }
+        
+        .nav-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0 20px;
+            line-height: 70px;             /* 垂直居中 */
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            background-color: #1565c0;     /* 悬停变色 */
+            border-radius: 4px;
+        }
+        
+        /* 当前激活项 */
+        .nav-menu a.active {
+            background-color: #0d47a1;
+            font-weight: bold;
+        }
+        
+        /* Logo / 网站名称 */
+        .logo {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 40px;
+        }
+        /* 响应式：小屏幕时变成汉堡菜单（可后续加JS展开） */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;    /* 变成垂直 */
+                height: auto;
+                padding: 10px 0;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+            }
+            
+            .nav-menu a {
+                line-height: 50px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h2>HELLO WOLRD</h2>
+  <!-- 横向导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <!-- Logo / 首页 -->
+                <li><a href="#" class="logo">我的网站</a></li>
+                
+                <!-- 导航链接 -->
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">产品服务</a></li>
+                <li><a href="#">案例展示</a></li>
+                <li><a href="#">新闻动态</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
 </body>
 
 </html>
