@@ -11,7 +11,7 @@
 <script>
 async function load() {
   const res = await fetch("/api?trust_key=123&info=hello"); // 你的 Worker 地址
-  const data = await res.text();
+  const data = await res.json();
 
   const element = document.getElementById("box");
 
