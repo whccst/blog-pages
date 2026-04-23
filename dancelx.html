@@ -18,7 +18,7 @@ async function load() {
   const value=document.getElementById('token').value;
 const content=document.getElementById('note').value;
   const res = await fetch(`/api?trust_key=${value}&info=${content}`); // 你的 Worker 地址
-  const data = await res.json();
+  const data = await res.text();
 
   const element = document.getElementById("box");
 
