@@ -15,12 +15,14 @@
 <button id="btn_search" type="button" onclick="load()" name="button">查询</button></div>
 <script>
 async function load() {
+const element = document.getElementById("box");
+element.innerText = "查询中，请稍等...";
   const value=document.getElementById('token').value;
 const content=document.getElementById('note').value;
   const res = await fetch(`/api?trust_key=${value}&info=${content}`); // 你的 Worker 地址
   const data = await res.text();
 
-  const element = document.getElementById("box");
+  
 
   // 👉 就写在这里
   element.innerText = data;
